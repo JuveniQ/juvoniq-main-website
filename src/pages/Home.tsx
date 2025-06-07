@@ -30,6 +30,19 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Banner Section */}
+      <section className="w-full bg-gradient-to-r from-primary/5 to-accent/10 py-8 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center fade-in">
+            <img 
+              src="/JIQ_main_logo.png" 
+              alt="JuvoniQ Main Logo" 
+              className="max-h-24 w-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 via-accent/10 to-background py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
