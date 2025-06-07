@@ -55,8 +55,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: "hello@juveniq.com",
-      action: "mailto:hello@juveniq.com"
+      details: "contact@juveniq.co.za",
+      action: "mailto:contact@juveniq.co.za"
     },
     {
       icon: Phone,
@@ -67,7 +67,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office Location",
-      details: "Cape Town, South Africa",
+      details: "eMalahleni, South Africa",
       action: "#"
     },
     {
@@ -246,7 +246,7 @@ const Contact = () => {
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
                     <p className="text-tertiary">Interactive Map Coming Soon</p>
-                    <p className="text-sm text-tertiary">Cape Town, South Africa</p>
+                    <p className="text-sm text-tertiary">eMalahleni, South Africa</p>
                   </div>
                 </div>
               </CardContent>

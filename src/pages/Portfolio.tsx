@@ -9,7 +9,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "HealthConnect Clinic Management",
-      description: "A comprehensive clinic management system that streamlines patient records, appointment scheduling, and billing for a network of community health clinics across Cape Town.",
+      description: "A comprehensive clinic management system that streamlines patient records, appointment scheduling, and billing for a network of community health clinics across eMalahleni.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe API"],
       category: "Healthcare",

@@ -82,7 +82,7 @@ const About = () => {
               <p className="text-lg text-tertiary leading-relaxed mb-6">
                 JuvoniQ was founded by <strong className="text-foreground">Jay</strong> and{" "}
                 <strong className="text-foreground">Sthembiso</strong>, two passionate 
-                technologists who met while studying computer science in Cape Town.
+                technologists who met while studying computer science in eMalahleni.
               </p>
               <p className="text-lg text-tertiary leading-relaxed mb-6">
                 After witnessing countless small businesses struggle with outdated systems 

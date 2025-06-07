@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import icon_1 from '../../public/JIQ_white_logo_no_bg.png'
 
 const Footer = () => {
   return (
@@ -9,21 +10,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="text-2xl font-bold text-primary mb-4 block">
-              JuvoniQ
+            <div className="flex items-center slide-in-left">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="logo-space group-hover:scale-105 transition-transform duration-300">
+                <img src={icon_1}/>
+              </div>
+              <span className="text-2xl font-bold text-tertiary">JuvoniQ</span>
             </Link>
-            <p className="text-tertiary mb-4 max-w-md">
+          </div>
+            <p className="text-white mb-4 max-w-md">
               Empowering African businesses with simple, impactful technology solutions. 
               From web applications to AI automation, we make tech work for you.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-tertiary hover:text-primary transition-colors">
+              <a href="#" className="text-white hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-tertiary hover:text-primary transition-colors">
+              <a href="#" className="text-white hover:text-primary transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-tertiary hover:text-primary transition-colors">
+              <a href="#" className="text-white hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -34,17 +40,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-tertiary hover:text-primary transition-colors">
+                <Link to="/about" className="text-grey hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-tertiary hover:text-primary transition-colors">
+                <Link to="/services" className="text-grey hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-tertiary hover:text-primary transition-colors">
+                <Link to="/portfolio" className="text-grey hover:text-primary transition-colors">
                   Portfolio
                 </Link>
               </li>
@@ -75,7 +81,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 text-primary mt-1" />
                 <span className="text-tertiary">
-                  Cape Town, South Africa
+                  eMalahlani, South Africa
                 </span>
               </li>
             </ul>
@@ -85,7 +91,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-tertiary/20 mt-8 pt-8 text-center">
           <p className="text-tertiary">
-            © 2024 JuvoniQ. All rights reserved. Built with passion in Africa.
+            © 2025 JuvoniQ. All rights reserved. Built with passion in Africa.
           </p>
         </div>
       </div>
