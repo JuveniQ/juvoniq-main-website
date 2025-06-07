@@ -19,27 +19,30 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="bg-background border-b border-border sticky top-0 z-50">
+    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-sm">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              JuvoniQ
+          <div className="flex items-center slide-in-left">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="logo-space group-hover:scale-105 transition-transform duration-300">
+                J
+              </div>
+              <span className="text-2xl font-bold text-primary">JuvoniQ</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:block fade-in-delay">
+            <div className="ml-10 flex items-baseline space-x-8">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`nav-link px-3 py-2 text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? "text-primary bg-accent"
-                      : "text-tertiary hover:text-primary hover:bg-accent"
+                      ? "text-primary active"
+                      : "text-tertiary hover:text-primary"
                   }`}
                 >
                   {item.name}
@@ -49,9 +52,9 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block fade-in-delay">
             <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Get Quote
               </Button>
             </Link>
@@ -61,7 +64,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-tertiary hover:text-primary"
+              className="text-tertiary hover:text-primary transition-colors duration-200 p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -70,13 +73,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
+          <div className="md:hidden fade-in-up">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border bg-background/95 backdrop-blur-sm">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className={`block px-3 py-3 rounded-md text-base font-medium transition-all duration-200 ${
                     isActive(item.href)
                       ? "text-primary bg-accent"
                       : "text-tertiary hover:text-primary hover:bg-accent"
@@ -86,9 +89,9 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-2">
+              <div className="pt-4">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
                     Get Quote
                   </Button>
                 </Link>

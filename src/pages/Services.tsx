@@ -106,48 +106,53 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 fade-in">
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-20 fade-in">
+          <div className="mb-8 flex justify-center">
+            <div className="logo-space w-16 h-16 text-2xl shadow-xl">
+              J
+            </div>
+          </div>
+          <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8">
             Our Services
           </h1>
-          <p className="text-xl text-tertiary max-w-3xl mx-auto">
+          <p className="text-xl text-tertiary max-w-4xl mx-auto leading-relaxed">
             From web applications to AI automation, we provide comprehensive 
             technology solutions tailored to your business needs.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-24">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card 
                 key={service.title} 
-                className="hover:shadow-lg transition-all duration-300 fade-in-up border-border"
+                className="hover-lift transition-all duration-300 fade-in-up border-border group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-6 w-6 text-primary" />
+                <CardContent className="p-10">
+                  <div className="flex items-start space-x-6 mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-semibold text-foreground mb-2">
+                      <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                         {service.title}
                       </h3>
-                      <p className="text-tertiary leading-relaxed">
+                      <p className="text-tertiary leading-relaxed text-lg">
                         {service.description}
                       </p>
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-center">
-                        <Check className="h-4 w-4 text-primary mr-2" />
-                        <span className="text-sm text-tertiary">{feature}</span>
+                        <Check className="h-5 w-5 text-primary mr-3" />
+                        <span className="text-tertiary">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -158,55 +163,55 @@ const Services = () => {
         </div>
 
         {/* Packages Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12 fade-in-up">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+        <div className="mb-20">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Solution Packages
             </h2>
-            <p className="text-lg text-tertiary max-w-2xl mx-auto">
+            <p className="text-xl text-tertiary max-w-3xl mx-auto leading-relaxed">
               Choose from our pre-designed packages or let us create a custom solution for your specific needs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.name} 
-                className={`hover:shadow-lg transition-all duration-300 fade-in-up relative ${
-                  pkg.highlight ? 'border-primary shadow-lg' : 'border-border'
+                className={`hover-lift transition-all duration-300 fade-in-up relative group ${
+                  pkg.highlight ? 'border-primary shadow-xl scale-105' : 'border-border'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {pkg.highlight && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground">
+                  <Badge className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground shadow-lg">
                     Most Popular
                   </Badge>
                 )}
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-xl font-bold text-foreground mb-2">
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                     {pkg.name}
                   </CardTitle>
-                  <p className="text-sm text-tertiary mb-4">
+                  <p className="text-tertiary mb-6 leading-relaxed">
                     {pkg.description}
                   </p>
-                  <div className="text-2xl font-bold text-primary">
+                  <div className="text-3xl font-bold text-primary">
                     {pkg.price}
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-3 mb-8">
                     {pkg.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm">
-                        <Check className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                      <li key={feature} className="flex items-center">
+                        <Check className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
                         <span className="text-tertiary">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Link to="/contact">
                     <Button 
-                      className={`w-full ${
+                      className={`w-full transition-all duration-300 hover:scale-105 ${
                         pkg.highlight 
-                          ? 'bg-primary hover:bg-primary/90 text-primary-foreground' 
+                          ? 'bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg' 
                           : 'bg-accent hover:bg-accent/80 text-accent-foreground'
                       }`}
                     >
@@ -220,18 +225,18 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-accent/30 rounded-2xl p-8 lg:p-12 fade-in-up">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
+        <div className="text-center bg-gradient-to-br from-accent/30 to-accent/10 rounded-3xl p-12 lg:p-16 fade-in-up shadow-lg">
+          <h2 className="text-4xl font-bold text-foreground mb-6">
             Need Something Custom?
           </h2>
-          <p className="text-lg text-tertiary mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-tertiary mb-10 max-w-3xl mx-auto leading-relaxed">
             Every business is unique. Let us create a tailored solution that perfectly 
             fits your specific requirements and budget.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 px-8 py-6 text-lg">
               Discuss Your Project
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-3 h-5 w-5" />
             </Button>
           </Link>
         </div>
