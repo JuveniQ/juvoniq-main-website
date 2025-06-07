@@ -31,15 +31,13 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Banner Section */}
-      <section className="w-full bg-gradient-to-r from-primary/5 to-accent/10 py-8 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center fade-in">
-            <img 
-              src="/JIQ_main_logo.png" 
-              alt="JuvoniQ Main Logo" 
-              className="max-h-24 w-auto object-contain"
-            />
-          </div>
+      <section className="w-full relative overflow-hidden bg-gradient-to-r from-primary/5 to-accent/10">
+        <div className="aspect-w-16 aspect-h-9"> {/* 16:9 aspect ratio */}
+          <img
+            src="/banner.png"
+            alt="JuvoniQ Main Banner"
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
@@ -50,11 +48,6 @@ const Home = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center fade-in">
-            <div className="mb-8 flex justify-center">
-              <div className="logo-space w-20 h-20 text-3xl shadow-2xl">
-                J
-              </div>
-            </div>
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
               Simple Tech.{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
@@ -62,7 +55,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-tertiary mb-12 max-w-4xl mx-auto leading-relaxed">
-              Empowering African businesses with custom software solutions. 
+              Empowering African businesses with custom software solutions.
               From startups to NGOs, we build technology that works for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in-delay">
@@ -90,7 +83,7 @@ const Home = () => {
               What We Do Best
             </h2>
             <p className="text-xl text-tertiary max-w-3xl mx-auto leading-relaxed">
-              We specialize in creating technology solutions that are simple, 
+              We specialize in creating technology solutions that are simple,
               effective, and tailored to African business needs.
             </p>
           </div>
@@ -99,8 +92,8 @@ const Home = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card 
-                  key={service.title} 
+                <Card
+                  key={service.title}
                   className="hover-lift transition-all duration-300 border-border group cursor-pointer fade-in-up"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
@@ -132,7 +125,7 @@ const Home = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Join hundreds of African businesses that trust JuvoniQ for their technology needs. 
+            Join hundreds of African businesses that trust JuvoniQ for their technology needs.
             Let's build something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
