@@ -16,7 +16,7 @@ const Footer = () => {
                 <img src={icon_1}/>
               </div>
               <span className="text-4xl font-montserrat-bold text-white text-primary">
-                Juvoni
+                Juveni
                 <span className="font-quando">Q</span>
                 </span>
             </Link>
@@ -94,7 +94,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-tertiary/20 mt-8 pt-8 text-center">
           <p className="text-tertiary">
-            © 2025 JuvoniQ. All rights reserved. Built with passion in Africa.
+            © 2025 JuveniQ. All rights reserved. Built with passion in Africa.
           </p>
         </div>
       </div>

@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex items-center slide-in-left">
             <Link to="/" className="flex items-center space-x-3 group">
               <span className="text-4xl font-montserrat-bold text-primary">
-                Juvoni
+                Juveni
                 <span className="font-quando">Q</span>
                 </span>
             </Link>
