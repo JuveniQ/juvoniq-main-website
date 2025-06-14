@@ -1,10 +1,19 @@
 
+import { useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Globe, Smartphone, Brain, Wrench } from "lucide-react";
+import { ArrowRight, Globe, Smartphone, Brain, Wrench, ChevronsRight, ChevronRight } from "lucide-react";
 
 const Home = () => {
+  const contentStartRef = useRef(null)
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      contentStartRef.current.scrollIntoView({behavior: 'smooth'})
+    }, 1500)
+  }, [])
+
   const services = [
     {
       icon: Globe,
@@ -32,7 +41,7 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Banner Section */}
       <section className="w-full relative overflow-hidden bg-gradient-to-r from-primary/5 to-accent/10">
-        <div className="aspect-w-16 aspect-h-9"> {/* 16:9 aspect ratio */}
+        <div className="w-f h-61 "> {/* 16:9 aspect ratio */}
           <img
             src="/banner.png"
             alt="JuvoniQ Main Banner"
@@ -43,10 +52,10 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 via-accent/10 to-background py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-30" ref={contentStartRef}>
           <div className="w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:60px_60px]"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" >
           <div className="text-center fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
               Simple Tech.{" "}
@@ -132,12 +141,13 @@ const Home = () => {
             <Link to="/contact">
               <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-accent shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 px-8 py-6 text-lg">
                 Start Your Project
-                <ArrowRight className="ml-3 h-5 w-5" />
+                <ChevronRight className="ml-3 h-5 w-5" />
               </Button>
             </Link>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-8 py-6 text-lg">
+              <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 px-8 py-6 text-lg">
                 View All Services
+                <ChevronsRight className='ml-3 h-5 w-5'/>
               </Button>
             </Link>
           </div>

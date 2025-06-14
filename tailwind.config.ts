@@ -20,7 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'montserrat': ['Montserrat', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans'],
+				'quando': ['Quando', 'sans']
 			},
 			colors: {
 				border: 'hsl(var(--border))',

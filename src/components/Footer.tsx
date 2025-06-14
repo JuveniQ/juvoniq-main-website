@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
-import icon_1 from '../../public/JIQ_white_logo_no_bg.png'
+import icon_1 from '/JIQ_white_logo_no_bg.png'
 
 const Footer = () => {
   return (
@@ -15,7 +15,10 @@ const Footer = () => {
               <div className="logo-space group-hover:scale-105 transition-transform duration-300">
                 <img src={icon_1}/>
               </div>
-              <span className="text-2xl font-bold text-tertiary">JuvoniQ</span>
+              <span className="text-4xl font-montserrat-bold text-white text-primary">
+                Juvoni
+                <span className="font-quando">Q</span>
+                </span>
             </Link>
           </div>
             <p className="text-white mb-4 max-w-md">
@@ -55,7 +58,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-tertiary hover:text-primary transition-colors">
+                <Link to="/contact" className="text-grey hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>

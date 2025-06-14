@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,8 +17,13 @@ import {
   Linkedin,
   MessageCircle
 } from "lucide-react";
+import icon from '/JIQ_main_logo_no_bg.png'
 
 const Contact = () => {
+
+  //Scroll the page to the top on page load
+  useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -104,6 +109,11 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 fade-in">
+          <div className="mb-8 flex justify-center">
+            <div className="logo-space-small w-24 h-24 rounded-full text-2xl shadow-xl">
+              <img src={icon} alt="Logo"/>
+            </div>
+          </div>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Get In Touch
           </h1>

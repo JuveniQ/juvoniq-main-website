@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import icon_1 from "../../public/JIQ_white_logo_no_bg.png"
+import icon_1 from "/JIQ_white_logo_no_bg.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,10 +26,10 @@ const Header = () => {
           
           <div className="flex items-center slide-in-left">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="logo-space group-hover:scale-105 transition-transform duration-300">
-                <img src={icon_1}/>
-              </div>
-              <span className="text-2xl font-bold text-primary">JuvoniQ</span>
+              <span className="text-4xl font-montserrat-bold text-primary">
+                Juvoni
+                <span className="font-quando">Q</span>
+                </span>
             </Link>
           </div>
 

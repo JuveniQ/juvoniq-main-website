@@ -95,7 +95,7 @@
   }
   
   .fade-in-delay {
-    animation: fade-in 0.8s ease-out 0.3s both;
+    animation: fade-in 0.8s ease-out 0.5s both;
   }
 
   .slide-in-left {
@@ -134,9 +134,15 @@
   }
 
   .logo-space {
-    @apply w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg;
+    @apply w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg;
+  }
+
+  .logo-space-small{
+     @apply w-24 h-24 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg;
   }
 }
+
+
 
 @keyframes fade-in {
   from {
@@ -167,4 +173,17 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+
+@font-face {
+  font-family: 'quando';
+  src: url('/fonts/Quando/Quando-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('/font/Montserrat/static/Montserrat-Bold.ttf')
 }

@@ -1,8 +1,14 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Heart, TrendingUp } from "lucide-react";
+import { useEffect } from "react";
+import icon from '/JIQ_main_logo_no_bg.png'
 
 const About = () => {
+
+  //Scroll the page to the top on page load
+  useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
+
   const values = [
     {
       icon: Heart,
@@ -32,8 +38,8 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-20 fade-in">
           <div className="mb-8 flex justify-center">
-            <div className="logo-space w-16 h-16 text-2xl shadow-xl">
-              J
+            <div className="logo-space-small w-24 h-24 rounded-full text-2xl shadow-xl">
+              <img src={icon} alt="Logo"/>
             </div>
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8">
