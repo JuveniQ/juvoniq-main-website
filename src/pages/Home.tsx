@@ -44,7 +44,7 @@ const Home = () => {
         <div className="w-f h-61 "> {/* 16:9 aspect ratio */}
           <img
             src="/banner.png"
-            alt="JuvoniQ Main Banner"
+            alt="JuveniQ Main Banner"
             className="w-full h-full object-cover"
           />
         </div>
@@ -134,7 +134,7 @@ const Home = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Join hundreds of African businesses that trust JuvoniQ for their technology needs.
+            Join hundreds of African businesses that trust JuveniQ for their technology needs.
             Let's build something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

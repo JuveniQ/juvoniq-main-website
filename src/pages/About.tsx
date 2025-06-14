@@ -43,7 +43,7 @@ const About = () => {
             </div>
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8">
-            About JuvoniQ
+            About JuveniQ
           </h1>
           <p className="text-xl text-tertiary max-w-4xl mx-auto leading-relaxed">
             We're a young, dynamic African tech startup on a mission to make 
@@ -86,7 +86,7 @@ const About = () => {
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-lg text-tertiary leading-relaxed mb-6">
-                JuvoniQ was founded by <strong className="text-foreground">Jay</strong> and{" "}
+                JuveniQ was founded by <strong className="text-foreground">Jay</strong> and{" "}
                 <strong className="text-foreground">Sthembiso</strong>, two passionate 
                 technologists who met while studying computer science in eMalahleni.
               </p>
@@ -96,7 +96,7 @@ const About = () => {
                 would bridge the technology gap for African entrepreneurs.
               </p>
               <p className="text-lg text-tertiary leading-relaxed">
-                Starting from a small shared workspace, they've grown JuvoniQ into a 
+                Starting from a small shared workspace, they've grown JuveniQ into a 
                 trusted partner for businesses, NGOs, and individuals across South Africa 
                 and beyond.
               </p>
@@ -149,11 +149,11 @@ const About = () => {
         <div className="text-center fade-in-up">
           <img 
             src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
-            alt="JuvoniQ team collaborating" 
+            alt="JuveniQ team collaborating" 
             className="rounded-3xl w-full max-w-5xl mx-auto h-80 lg:h-96 object-cover shadow-2xl hover-lift"
           />
           <p className="text-tertiary mt-6 text-lg">
-            The JuvoniQ team collaborating on the next big project
+            The JuveniQ team collaborating on the next big project
           </p>
         </div>
       </div>
