@@ -141,7 +141,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <MapPin size={16} color="white" className="mr-2 text-primary mt-1" />
-                <span className="text-tertiary">eMalahlani, South Africa</span>
+                <span className="text-tertiary">Emalahleni, South Africa</span>
               </li>
               <li className="flex items-start">
                 <Mail size={16} color="white" className="mr-2 text-primary mt-1" />
