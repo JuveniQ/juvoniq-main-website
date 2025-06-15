@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github } from "lucide-react";
 import icon_1 from '/JIQ_white_logo_no_bg.png'
 
 const Footer = () => {
@@ -29,10 +29,12 @@ const Footer = () => {
               <a href="https:www.facebook.com/JuveniQ" className="text-white hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-white hover:text-primary transition-colors">
-                <Twitter size={20} />
+
+              <a href="https://github.com/JuveniQ/" className="text-white hover:text-primary transition-colors">
+                <Github size={20} />
               </a>
-              <a href="#" className="text-white hover:text-primary transition-colors">
+              
+              <a href="https://www.linkedin.com/company/juveniq" className="text-white hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>

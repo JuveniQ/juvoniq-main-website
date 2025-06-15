@@ -15,7 +15,8 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-  MessageCircle
+  MessageCircle,
+  Github
 } from "lucide-react";
 import icon from '/JIQ_main_logo_no_bg.png'
 
@@ -65,9 +66,15 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      title: "Phone Number",
-      details: "+27 12 345 6789",
-      action: "tel:+27123456789"
+      title: "Phone Number #1",
+      details: "+27 60 743 1268",
+      action: "tel:+27607431268"
+    },
+    {
+      icon: Phone,
+      title: "Phone Number #2",
+      details: "+27 78 332 2419",
+      action: "tel:+27783322419"
     },
     {
       icon: MapPin,
@@ -87,19 +94,19 @@ const Contact = () => {
     {
       icon: Facebook,
       name: "Facebook",
-      url: "#",
+      url: "https://www.facebook.com/JuveniQ",
       color: "hover:text-blue-600"
     },
     {
-      icon: Twitter,
-      name: "Twitter",
-      url: "#",
+      icon: Github,
+      name: "GitHub",
+      url: "https://github.com/JuveniQ",
       color: "hover:text-blue-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/company/juveniq",
       color: "hover:text-blue-700"
     }
   ];
