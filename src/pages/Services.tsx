@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import icon from '/JIQ_main_logo_no_bg.png'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { ServicePackages } from "@/components/ServicePackages";
+import { Web, Smartphone } from "lucide-react";
 
 const promoNote = "Promotion: 85% OFF for 2025 (prices return to normal next year)";
 
@@ -29,101 +32,111 @@ function PriceDisplay({ oldZar, oldUsd }: { oldZar: number, oldUsd: number }) {
   );
 }
 
-const packages = [
+const webPackages = [
   {
     type: "Web",
     name: "Basic Website",
-    description: "Up to 5 pages (Home, About, Contact, 1–2 service pages) with custom UI/UX design, responsive layout, basic SEO, contact form, and 1 month maintenance (content updates and bug fixes).",
+    description:
+      "Approx. 5 pages (Home, About, Contact, 1–2 services); custom UI/UX design; responsive layout; basic SEO; contact form; 1 month maintenance (updates, bug fixes).",
     delivery: "~4–6 weeks",
     oldZar: 15000,
     oldUsd: 1000,
     features: [
       "5-page website",
-      "Custom design",
+      "Custom UI/UX",
       "Responsive layout",
       "Basic SEO",
       "Contact form",
-      "1 month maintenance"
-    ]
+      "1 month maintenance",
+    ],
   },
   {
     type: "Web",
     name: "Standard Website",
-    description: "10-page corporate site with professional design, CMS (e.g. WordPress), e-commerce or booking plugin, on-page SEO, 3 months maintenance (updates, security patches).",
+    description:
+      "10-page corporate site; professional design; CMS (e.g. WordPress); e-commerce or booking; on-page SEO; 3 months maintenance (minor updates, security patches).",
     delivery: "~8–10 weeks",
     oldZar: 60000,
     oldUsd: 4000,
     features: [
-      "10-page site",
+      "10-page corporate site",
       "Professional design",
-      "CMS integration",
+      "CMS for updates",
       "E-commerce or booking",
       "SEO optimization",
-      "3 months maintenance"
-    ]
+      "3 months maintenance",
+    ],
   },
   {
     type: "Web",
     name: "Premium Website",
-    description: "20+ page enterprise portal or web app with premium UI/UX, custom integrations (e.g. CRM, payments), user accounts, admin dashboard, 6 months priority support and upgrades.",
+    description:
+      "20+ page enterprise portal or web app; premium UI/UX; custom integrations (CRM, payments); advanced features (user accounts, admin dashboard); 6 months support (major upgrades, priority response).",
     delivery: "~12–16 weeks",
     oldZar: 150000,
     oldUsd: 10000,
     features: [
-      "20+ pages or enterprise web app",
+      "20+ page web app",
       "Premium UI/UX",
-      "Custom integrations",
-      "User accounts & dashboard",
-      "6 months support"
-    ]
+      "Custom CRM & payments",
+      "Advanced features",
+      "Admin dashboard",
+      "6 months support",
+    ],
   },
+];
+
+const appPackages = [
   {
     type: "App",
     name: "Basic App",
-    description: "Simple cross-platform mobile app (React Native), e.g. informational or portfolio app. Includes login, basic content feed, push notifications, Android & iOS, 1 month bug-fix support.",
+    description:
+      "Simple mobile app (React Native) – e.g. informational or portfolio app. Login/sign-up, content feed, push notifications, standard UI, Android & iOS, 1 month bug-fix support.",
     delivery: "~8–10 weeks",
     oldZar: 200000,
     oldUsd: 12000,
     features: [
       "Simple mobile app",
-      "Login/sign-up",
-      "Basic content feed",
+      "Sign-up/login",
+      "Basic feed",
       "Push notifications",
       "Android & iOS",
-      "1 month support"
-    ]
+      "1 month bug-fix support",
+    ],
   },
   {
     type: "App",
     name: "Standard App",
-    description: "SME eCommerce or booking app—user profiles, search, cart or booking engine, payments, chat support, custom UI/UX, cross-platform, 3 months maintenance.",
+    description:
+      "SME-level app (eCommerce or booking): user profiles, search, shopping cart/booking engine, payment, chat support, custom UI/UX, cross-platform, 3 months maintenance.",
     delivery: "~16 weeks",
     oldZar: 600000,
     oldUsd: 40000,
     features: [
-      "eCommerce or booking",
+      "eCommerce/booking app",
       "User profiles & chat",
-      "Payments integration",
+      "Payment integration",
       "Custom UI/UX",
       "Cross-platform",
-      "3 months maintenance"
-    ]
+      "3 months maintenance",
+    ],
   },
   {
     type: "App",
     name: "Premium App",
-    description: "Full-featured enterprise app—advanced modules (real-time chat, analytics, admin panel, high security), all Standard features, 6+ months dedicated priority support.",
+    description:
+      "Full-featured enterprise app. Includes all Standard features, plus advanced modules (real-time chat, analytics, admin panel, high security), priority support, 6+ months maintenance.",
     delivery: "~24+ weeks",
     oldZar: 1200000,
     oldUsd: 80000,
     features: [
       "Enterprise features",
-      "Advanced modules",
+      "Real-time chat/analytics",
+      "Complex admin panel",
       "High security",
-      "Analytics dashboard",
-      "Admin panel",
-      "6+ months support"
-    ]
+      "Priority support",
+      "6+ months maintenance",
+    ],
   },
 ];
 
@@ -232,52 +245,26 @@ useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
             </p>
           </div>
 
-          {/* Category badges */}
-          <div className="flex gap-3 justify-center mb-6">
-            <Badge variant="outline" className="bg-primary/5 text-primary">Web Packages</Badge>
-            <Badge variant="outline" className="bg-primary/5 text-primary">App Packages</Badge>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card 
-                key={pkg.name} 
-                className={`hover-lift transition-all duration-300 fade-in-up relative group border-border`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                    {pkg.name}
-                  </CardTitle>
-                  <p className="text-tertiary mb-3 leading-relaxed">
-                    <span className="font-medium">{pkg.type} Package</span>
-                  </p>
-                  <div className="mb-2">
-                    <PriceDisplay oldZar={pkg.oldZar} oldUsd={pkg.oldUsd} />
-                  </div>
-                  <div className="text-sm text-muted-foreground mb-2 italic">{pkg.delivery} delivery</div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="mb-4 text-tertiary">{pkg.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {pkg.features.map((feature) => (
-                      <li key={feature} className="flex items-center">
-                        <Check className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
-                        <span className="text-tertiary">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link to="/contact">
-                    <Button 
-                      className="w-full transition-all duration-300 hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
-                    >
-                      Get Started
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Tabs defaultValue="web" className="w-full">
+            <TabsList className="flex gap-2 justify-center mb-8">
+              <TabsTrigger value="web" className="flex items-center gap-2 text-base">
+                <Web className="h-5 w-5" />
+                Web Packs
+              </TabsTrigger>
+              <TabsTrigger value="apps" className="flex items-center gap-2 text-base">
+                {/* Show both Android and iOS icon using Smartphone twice for visual parity */}
+                <Smartphone className="h-5 w-5" />
+                Mobile Apps
+                <Smartphone className="h-5 w-5 opacity-60 -ml-2" />
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="web">
+              <ServicePackages packages={webPackages} />
+            </TabsContent>
+            <TabsContent value="apps">
+              <ServicePackages packages={appPackages} />
+            </TabsContent>
+          </Tabs>
           <div className="text-center mt-6">
             <span className="text-xs text-muted-foreground">{promoNote}</span>
           </div>
