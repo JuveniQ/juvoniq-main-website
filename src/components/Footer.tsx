@@ -70,23 +70,18 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <Mail size={16} className="mr-2 text-primary" />
-                <a href="mailto:hello@juveniq.com" className="text-tertiary hover:text-primary transition-colors">
-                  hello@juveniq.com
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Phone size={16} className="mr-2 text-primary" />
-                <a href="tel:+27 60 743 1268" className="text-tertiary hover:text-primary transition-colors">
-                  +27 60 743 1268  
-                </a>
-                
-                <p className="mx-2 text-tertiary hover:text-primary transition-colors">/</p>
+  <Phone size={16} className="mr-2 text-primary" />
+  <div className="flex flex-wrap sm:flex-nowrap gap-x-2 text-tertiary">
+    <a href="tel:+27607431268" className="hover:text-primary transition-colors whitespace-nowrap">
+      +27 60 743 1268
+    </a>
+    <span className="mx-1">/</span>
+    <a href="tel:+27783322419" className="hover:text-primary transition-colors whitespace-nowrap">
+      +27 78 332 2419
+    </a>
+  </div>
+</li>
 
-                <a href="tel:+27 78 332 2419" className="text-tertiary hover:text-primary transition-colors">
-                  +27 78 332 2419  
-                </a>
-              </li>
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 text-primary mt-1" />
                 <span className="text-tertiary">
