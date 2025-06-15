@@ -42,14 +42,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: "contact@juveniq.co.za",
+      details: "juveniq105@gmail.com",
       action: "mailto:contact@juveniq.co.za",
     },
     {
       icon: Phone,
       title: "Phone Number",
-      details: "+27 12 345 6789",
-      action: "tel:+27123456789"
+      details: "+27 78 332 2419",
+      action: "tel:+277833224193"
     },
     {
       icon: MapPin,
