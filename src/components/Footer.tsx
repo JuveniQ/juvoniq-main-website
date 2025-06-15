@@ -35,8 +35,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https:www.facebook.com/JuveniQ"
+                href="https://www.facebook.com/JuveniQ"
                 className="text-white hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Facebook size={20} />
               </a>
@@ -44,6 +46,8 @@ const Footer = () => {
               <a
                 href="https://github.com/JuveniQ/"
                 className="text-white hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github size={20} />
               </a>
@@ -51,6 +55,8 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/juveniq"
                 className="text-white hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin size={20} />
               </a>
