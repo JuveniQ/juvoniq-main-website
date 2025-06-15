@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,8 @@ import { useEffect } from "react";
 import icon from '/JIQ_main_logo_no_bg.png'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ServicePackages } from "@/components/ServicePackages";
-import { Web, Smartphone } from "lucide-react";
+
+// Removed duplicate and non-existent icon import here
 
 const promoNote = "Promotion: 85% OFF for 2025 (prices return to normal next year)";
 
@@ -248,7 +250,8 @@ useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
           <Tabs defaultValue="web" className="w-full">
             <TabsList className="flex gap-2 justify-center mb-8">
               <TabsTrigger value="web" className="flex items-center gap-2 text-base">
-                <Web className="h-5 w-5" />
+                {/* Use Globe icon for Web Packs tab, since Web does not exist */}
+                <Globe className="h-5 w-5" />
                 Web Packs
               </TabsTrigger>
               <TabsTrigger value="apps" className="flex items-center gap-2 text-base">
