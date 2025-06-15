@@ -26,7 +26,7 @@ const Footer = () => {
               From web applications to AI automation, we make tech work for you.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-primary transition-colors">
+              <a href="https:www.facebook.com/JuveniQ" className="text-white hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="text-white hover:text-primary transition-colors">
