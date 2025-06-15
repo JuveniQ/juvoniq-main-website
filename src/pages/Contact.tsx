@@ -14,7 +14,8 @@ import {
   Twitter,
   Linkedin,
   MessageCircle,
-  Github
+  Github,
+  Instagram
 } from "lucide-react";
 import icon from "/JIQ_main_logo_no_bg.png";
 
@@ -89,6 +90,12 @@ const Contact = () => {
       name: "LinkedIn",
       url: "https://www.linkedin.com/company/juveniq",
       color: "hover:text-blue-700"
+    },
+    {
+      icon: Instagram,
+      name: 'Instagram',
+      url: 'https://instagram.com/juveniq',
+      color: 'hover:text-purple-700'
     }
   ];
 

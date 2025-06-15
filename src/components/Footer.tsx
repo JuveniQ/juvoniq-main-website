@@ -7,6 +7,7 @@ import {
   Twitter,
   Linkedin,
   Github,
+  Instagram,
 } from "lucide-react";
 import icon_1 from "/JIQ_white_logo_no_bg.png";
 
@@ -60,6 +61,16 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
+              <a
+                href="https://instagram.com/juveniq"
+                className="text-white hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={20} />
+              </a>
+
+
             </div>
           </div>
 
