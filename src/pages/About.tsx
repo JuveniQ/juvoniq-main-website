@@ -87,7 +87,7 @@ const About = () => {
             <div className="order-1 lg:order-2">
               <p className="text-lg text-tertiary leading-relaxed mb-6">
                 JuvoniQ was founded by <strong className="text-foreground">Alwande "Jay" Nhlapho</strong> and{" "}
-                <strong className="text-foreground">Sthembiso</strong>, two passionate 
+                <strong className="text-foreground">Sthembiso Ndlovu</strong>, two passionate 
                 technologists who met while studying computer science in eMalahleni.
               </p>
               <p className="text-lg text-tertiary leading-relaxed mb-6">
@@ -145,17 +145,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Image */}
-        <div className="text-center fade-in-up">
-          <img 
-            src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
-            alt="JuveniQ team collaborating" 
-            className="rounded-3xl w-full max-w-5xl mx-auto h-80 lg:h-96 object-cover shadow-2xl hover-lift"
-          />
-          <p className="text-tertiary mt-6 text-lg">
-            The JuveniQ team collaborating on the next big project
-          </p>
-        </div>
       </div>
     </div>
   );
