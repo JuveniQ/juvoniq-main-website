@@ -71,23 +71,23 @@ const Contact = () => {
     },
   ];
 
-  const socialLinks = [
+   const socialLinks = [
     {
       icon: Facebook,
       name: "Facebook",
-      url: "#",
+      url: "https://www.facebook.com/JuveniQ",
       color: "hover:text-blue-600"
     },
     {
-      icon: Twitter,
-      name: "Twitter",
-      url: "#",
+      icon: Github,
+      name: "GitHub",
+      url: "https://github.com/JuveniQ",
       color: "hover:text-blue-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/company/juveniq",
       color: "hover:text-blue-700"
     }
   ];
