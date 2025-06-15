@@ -45,11 +45,17 @@ const Contact = () => {
       details: "juveniq105@gmail.com",
       action: "mailto:contact@juveniq.co.za",
     },
+     {
+      icon: Phone,
+      title: "Phone Number #1",
+      details: "+27 60 743 1268",
+      action: "tel:+27607431268"
+    },
     {
       icon: Phone,
-      title: "Phone Number",
+      title: "Phone Number #2",
       details: "+27 78 332 2419",
-      action: "tel:+277833224193"
+      action: "tel:+27783322419"
     },
     {
       icon: MapPin,
