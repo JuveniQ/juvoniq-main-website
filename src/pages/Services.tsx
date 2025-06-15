@@ -9,9 +9,10 @@ import {
   Database,
   Headphones,
   ArrowRight,
-  Check
+  Check,
 } from "lucide-react";
 import { useEffect } from "react";
+import { FaAndroid, FaApple  } from 'react-icons/fa'
 import icon from '/JIQ_main_logo_no_bg.png';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ServicePackages } from "@/components/ServicePackages";
@@ -149,7 +150,8 @@ useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
               <TabsTrigger value="apps" className="flex items-center gap-2 text-base">
                 {/* Show both Android and iOS icon using Smartphone twice for visual parity */}
                 Mobile Apps
-                <Smartphone className="h-5 w-5 opacity-60 -ml-2" />
+                <FaApple className="h-5 w-5 opacity-60 -ml-2" />
+                <FaAndroid className="h-5 w-5 opacity-60 -ml-2" />
               </TabsTrigger>
             </TabsList>
             <TabsContent value="web">
