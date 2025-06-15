@@ -1,3 +1,7 @@
+import project1Image from '/JIQ_main_logo.png'
+import project2Image from '/projects/gig-kasi.png'
+import project3Image from '/projects/jcv.png'
+
 export const webPackages = [
   {
     type: "Web",
@@ -105,3 +109,55 @@ export const appPackages = [
     ],
   },
 ];
+
+
+
+export const projects = [
+    {
+      title: "JuveniQ Company Website",
+      description: "The official JuveniQ website showcasing our services, portfolio, and contact information to engage clients and highlight our expertise.",
+      image: project1Image,
+      technologies: ["React", "Tailwind CSS", "Node.js"],
+      category: "Corporate",
+      features: [
+        "Service showcase",
+        "Interactive portfolio gallery",
+        "Contact & inquiry forms",
+        "Blog section",
+        "SEO optimization"
+      ],
+      impact: "Improved brand visibility.",
+      link: null,
+    },
+    {
+      title: "GigKasi",
+      description: "A hyper-local platform connecting service providers and seekers in your neighborhood, matching skills to needs instantly.",
+      image: project2Image,
+      technologies: ["React Native", "Firebase Auth", "Firestore", "Cloud Functions"],
+      category: "Marketplace",
+      features: [
+        "Real-time geolocation matching",
+        "In-app chat",
+        "Ratings & reviews",
+        "Secure payments",
+        "Job posting & bidding"
+      ],
+      impact: "A work in development, Follow our social media accounts for early access and updates",
+      link: null,
+    },
+    {
+      title: "Resume / CV Maker",
+      description: "A user-friendly application that allows job seekers to create, customize, and download professional resumes and CVs in multiple formats.",
+      image: project3Image,
+      technologies: ["React", "HTML-to-PDF", "Styled Components", "TailWindcss"],
+      category: "Productivity",
+      features: [
+        "Template selection",
+        "Click-and-add editor",
+        "PDF export",
+      ],
+      impact: "Helped users build polished resumes, reducing job application time by 30%.",
+      link: "https://jcv-maker.netlify.app/",
+    },
+
+  ];

@@ -3,62 +3,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import icon from '/JIQ_main_logo_no_bg.png'
+import { projects } from "@/lib/data";
+
 const Portfolio = () => {
 
   //Scroll the page to the top on page load
-  useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
+  useEffect(() => window.scrollTo({ behavior: 'smooth', top: 0 }), [])
 
-  const projects = [
-    {
-      title: "HealthConnect Clinic Management",
-      description: "A comprehensive clinic management system that streamlines patient records, appointment scheduling, and billing for a network of community health clinics across eMalahleni.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe API"],
-      category: "Healthcare",
-      features: [
-        "Patient management system",
-        "Appointment scheduling",
-        "Billing & invoicing",
-        "Medical records database",
-        "Multi-clinic support"
-      ],
-      impact: "Reduced patient wait times by 40% and improved record accuracy by 95%"
-    },
-    {
-      title: "EduTrack Learning Platform",
-      description: "An interactive learning management system designed for rural schools, featuring offline capabilities and mobile-first design to work with limited internet connectivity.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      technologies: ["React Native", "Firebase", "PWA", "Offline Sync"],
-      category: "Education",
-      features: [
-        "Offline-first mobile app",
-        "Student progress tracking",
-        "Interactive lessons",
-        "Teacher dashboard",
-        "Parent communication portal"
-      ],
-      impact: "Improved student engagement by 60% and enabled learning for 500+ rural students"
-    },
-    {
-      title: "SmartInventory POS System",
-      description: "A modern point-of-sale and inventory management system for small retailers, featuring real-time analytics and automated stock alerts.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      technologies: ["Vue.js", "Express", "MongoDB", "Chart.js"],
-      category: "Retail",
-      features: [
-        "Real-time sales tracking",
-        "Inventory management",
-        "Customer loyalty program",
-        "Sales analytics dashboard",
-        "Multi-store support"
-      ],
-      impact: "Increased sales efficiency by 35% and reduced inventory losses by 25%"
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,14 +21,14 @@ const Portfolio = () => {
         <div className="text-center mb-16 fade-in">
           <div className="mb-8 flex justify-center">
             <div className="logo-space-small w-24 h-24 rounded-full text-2xl shadow-xl">
-              <img src={icon} alt="Logo"/>
+              <img src={icon} alt="Logo" />
             </div>
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Our Portfolio
           </h1>
           <p className="text-xl text-tertiary max-w-3xl mx-auto">
-            Discover how we've helped businesses across Africa transform their 
+            Discover how we've helped businesses across Africa transform their
             operations with custom technology solutions.
           </p>
         </div>
@@ -81,16 +36,16 @@ const Portfolio = () => {
         {/* Projects Grid */}
         <div className="space-y-16 mb-20">
           {projects.map((project, index) => (
-            <Card 
-              key={project.title} 
+            <Card
+              key={project.title}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 fade-in-up border-border"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 {/* Image */}
                 <div className="relative h-64 lg:h-full">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
@@ -153,22 +108,20 @@ const Portfolio = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button 
-                        variant="outline" 
-                        className="flex-1 border-primary text-primary hover:bg-primary/10"
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        className="flex-1 border-tertiary text-tertiary hover:bg-tertiary/10"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Case Study
-                      </Button>
-                    </div>
+                    {project.link &&
+                      <Link to={project.link}>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          
+                            <Button
+                              variant="outline"
+                              className="flex-1 border-primary text-primary hover:bg-primary/10"
+                            >
+                              <ExternalLink className="mr-2 h-4 w-4" />
+                              Go to
+                            </Button>
+                        </div>
+                      </Link>
+                    }
                   </CardContent>
                 </div>
               </div>
@@ -177,7 +130,7 @@ const Portfolio = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-accent/30 rounded-2xl p-8 lg:p-12 mb-16 fade-in-up">
+        {false && <div className="bg-accent/30 rounded-2xl p-8 lg:p-12 mb-16 fade-in-up">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Our Impact in Numbers
@@ -186,7 +139,7 @@ const Portfolio = () => {
               Real results for real businesses across Africa
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { number: "50+", label: "Projects Completed" },
@@ -204,7 +157,7 @@ const Portfolio = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div>}
 
         {/* CTA Section */}
         <div className="text-center fade-in-up">
