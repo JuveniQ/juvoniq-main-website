@@ -1,59 +1,40 @@
-
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   Send,
   Facebook,
   Twitter,
   Linkedin,
-  MessageCircle
+  MessageCircle,
 } from "lucide-react";
-import icon from '/JIQ_main_logo_no_bg.png'
+import icon from "/JIQ_main_logo_no_bg.png";
 
 const Contact = () => {
-
-  //Scroll the page to the top on page load
-  useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
+  useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), []);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setIsSubmitting(false);
-    }, 1000);
   };
 
   const contactInfo = [
@@ -61,26 +42,26 @@ const Contact = () => {
       icon: Mail,
       title: "Email Address",
       details: "contact@juveniq.co.za",
-      action: "mailto:contact@juveniq.co.za"
+      action: "mailto:contact@juveniq.co.za",
     },
     {
       icon: Phone,
       title: "Phone Number",
       details: "+27 12 345 6789",
-      action: "tel:+27123456789"
+      action: "tel:+27123456789",
     },
     {
       icon: MapPin,
       title: "Office Location",
       details: "eMalahleni, South Africa",
-      action: "#"
+      action: "#",
     },
     {
       icon: Clock,
       title: "Business Hours",
       details: "Mon - Fri: 8AM - 6PM",
-      action: "#"
-    }
+      action: "#",
+    },
   ];
 
   const socialLinks = [
@@ -88,43 +69,41 @@ const Contact = () => {
       icon: Facebook,
       name: "Facebook",
       url: "#",
-      color: "hover:text-blue-600"
+      color: "hover:text-blue-600",
     },
     {
       icon: Twitter,
       name: "Twitter",
       url: "#",
-      color: "hover:text-blue-400"
+      color: "hover:text-blue-400",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
       url: "#",
-      color: "hover:text-blue-700"
-    }
+      color: "hover:text-blue-700",
+    },
   ];
 
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16 fade-in">
           <div className="mb-8 flex justify-center">
             <div className="logo-space-small w-24 h-24 rounded-full text-2xl shadow-xl">
-              <img src={icon} alt="Logo"/>
+              <img src={icon} alt="Logo" />
             </div>
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Get In Touch
           </h1>
           <p className="text-xl text-tertiary max-w-3xl mx-auto">
-            Ready to transform your business with technology? Let's discuss your 
+            Ready to transform your business with technology? Let's discuss your
             project and create something amazing together.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div className="fade-in-up">
             <Card className="border-border">
               <CardHeader>
@@ -134,7 +113,11 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  action="https://formspree.io/f/mvgrrkdq"
+                  method="POST"
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name" className="text-foreground">
@@ -167,7 +150,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="subject" className="text-foreground">
                       Subject *
@@ -183,7 +166,7 @@ const Contact = () => {
                       placeholder="What's this about?"
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="message" className="text-foreground">
                       Message *
@@ -198,34 +181,28 @@ const Contact = () => {
                       placeholder="Tell us about your project, goals, and requirements..."
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
+
+                  <Button
+                    type="submit"
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-4 w-4" />
-                      </>
-                    )}
+                    Send Message
+                    <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
               </CardContent>
             </Card>
           </div>
 
-          {/* Contact Information */}
           <div className="space-y-8 fade-in-up" style={{ animationDelay: "0.2s" }}>
-            {/* Contact Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {contactInfo.map((info, index) => {
+              {contactInfo.map((info) => {
                 const Icon = info.icon;
                 return (
-                  <Card key={info.title} className="hover:shadow-lg transition-all duration-300 border-border">
+                  <Card
+                    key={info.title}
+                    className="hover:shadow-lg transition-all duration-300 border-border"
+                  >
                     <CardContent className="p-6 text-center">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <Icon className="h-6 w-6 text-primary" />
@@ -233,8 +210,9 @@ const Contact = () => {
                       <h3 className="font-semibold text-foreground mb-2">
                         {info.title}
                       </h3>
-                      {info.action.startsWith('mailto:') || info.action.startsWith('tel:') ? (
-                        <a 
+                      {info.action.startsWith("mailto:") ||
+                      info.action.startsWith("tel:") ? (
+                        <a
                           href={info.action}
                           className="text-tertiary hover:text-primary transition-colors"
                         >
@@ -249,7 +227,6 @@ const Contact = () => {
               })}
             </div>
 
-            {/* Map Placeholder */}
             <Card className="border-border">
               <CardContent className="p-0">
                 <div className="h-48 bg-accent/30 rounded-lg flex items-center justify-center">
@@ -262,7 +239,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Social Links */}
             <Card className="border-border">
               <CardHeader>
                 <CardTitle className="text-lg font-semibold text-foreground">
@@ -293,7 +269,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* FAQ Section */}
         <div className="mt-20 fade-in-up">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -308,29 +283,31 @@ const Contact = () => {
             {[
               {
                 question: "What's your typical project timeline?",
-                answer: "Most projects take 2-8 weeks depending on complexity. We'll provide a detailed timeline during our initial consultation."
+                answer:
+                  "Most projects take 2-8 weeks depending on complexity. We'll provide a detailed timeline during our initial consultation.",
               },
               {
                 question: "Do you provide ongoing support?",
-                answer: "Yes! All our packages include support periods, and we offer extended maintenance plans for long-term partnerships."
+                answer:
+                  "Yes! All our packages include support periods, and we offer extended maintenance plans for long-term partnerships.",
               },
               {
                 question: "Can you work with existing systems?",
-                answer: "Absolutely. We specialize in integrating with existing software and databases to enhance your current setup."
+                answer:
+                  "Absolutely. We specialize in integrating with existing software and databases to enhance your current setup.",
               },
               {
                 question: "What technologies do you use?",
-                answer: "We use modern, proven technologies like React, Node.js, Python, and cloud platforms to ensure reliability and scalability."
-              }
+                answer:
+                  "We use modern, proven technologies like React, Node.js, Python, and cloud platforms to ensure reliability and scalability.",
+              },
             ].map((faq, index) => (
               <Card key={index} className="border-border">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-2">
                     {faq.question}
                   </h3>
-                  <p className="text-tertiary text-sm">
-                    {faq.answer}
-                  </p>
+                  <p className="text-tertiary text-sm">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
