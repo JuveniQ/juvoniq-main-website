@@ -14,6 +14,7 @@ import {
   Twitter,
   Linkedin,
   MessageCircle,
+  Github
 } from "lucide-react";
 import icon from "/JIQ_main_logo_no_bg.png";
 
@@ -48,7 +49,7 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Number",
       details: "+27 12 345 6789",
-      action: "tel:+27123456789",
+      action: "tel:+27123456789"
     },
     {
       icon: MapPin,
@@ -69,20 +70,20 @@ const Contact = () => {
       icon: Facebook,
       name: "Facebook",
       url: "#",
-      color: "hover:text-blue-600",
+      color: "hover:text-blue-600"
     },
     {
       icon: Twitter,
       name: "Twitter",
       url: "#",
-      color: "hover:text-blue-400",
+      color: "hover:text-blue-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
       url: "#",
-      color: "hover:text-blue-700",
-    },
+      color: "hover:text-blue-700"
+    }
   ];
 
   return (
