@@ -4,7 +4,6 @@ import {
   Phone,
   MapPin,
   Facebook,
-  Twitter,
   Linkedin,
   Github,
   Instagram,
@@ -36,7 +35,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/JuveniQ"
+                href="https://www.facebook.com/profile.php?id=100066476117731"
                 className="text-white hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -76,7 +76,7 @@ const Contact = () => {
     {
       icon: Facebook,
       name: "Facebook",
-      url: "https://www.facebook.com/JuveniQ",
+      url: "https://www.facebook.com/profile.php?id=100066476117731 ",
       color: "hover:text-blue-600"
     },
     {
