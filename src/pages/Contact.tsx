@@ -269,6 +269,7 @@ const Contact = () => {
                         href={social.url}
                         className={`text-tertiary ${social.color} transition-colors`}
                         aria-label={social.name}
+                        target="_blank"
                       >
                         <Icon className="h-6 w-6" />
                       </a>
