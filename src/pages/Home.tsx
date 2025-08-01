@@ -45,7 +45,7 @@ const Home = () => {
     <img src="/banner1.png" alt="Banner 1" className="w-full h-61 object-cover flex-shrink-0" />
     <img src="/banner2.png" alt="Banner 2" className="w-full h-61 object-cover flex-shrink-0" />
     <img src="/banner3.png" alt="Banner 3" className="w-full h-61 object-cover flex-shrink-0" />
-    <img src="/banner1.png" alt="Banner 1 Duplicate" className="w-full h-61 object-cover flex-shrink-0" />
+    <img src="/banner.png" alt="Banner 1 Duplicate" className="w-full h-61 object-cover flex-shrink-0" />
   </div>
 </div>
 
