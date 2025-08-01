@@ -40,15 +40,14 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Banner Section */}
-      <section className="w-full relative overflow-hidden bg-gradient-to-r from-primary/5 to-accent/10">
-        <div className="w-f h-61 "> {/* 16:9 aspect ratio */}
-          <img
-            src="/banner.png"
-            alt="JuveniQ Main Banner"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
+  <div className="relative overflow-hidden w-full h-61">
+  <div className="absolute top-0 left-0 flex animate-scroll-x">
+    <img src="/banner1.png" alt="Banner 1" className="w-full h-61 object-cover flex-shrink-0" />
+    <img src="/banner2.png" alt="Banner 2" className="w-full h-61 object-cover flex-shrink-0" />
+    <img src="/banner3.png" alt="Banner 3" className="w-full h-61 object-cover flex-shrink-0" />
+    <img src="/banner1.png" alt="Banner 1 Duplicate" className="w-full h-61 object-cover flex-shrink-0" />
+  </div>
+</div>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 via-accent/10 to-background py-24 lg:py-32 overflow-hidden">
