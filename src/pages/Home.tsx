@@ -159,10 +159,4 @@ const Home = () => {
 
 export default Home;
 
-Wanna  change the banner (<img
-            src="/banner.png"
-            alt="JuveniQ Main Banner"
-            className="w-full h-full object-cover"
-          /> )
 
-into a horizontally automatic scrolling image/visual content.
