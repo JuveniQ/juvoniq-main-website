@@ -86,7 +86,7 @@ const About = () => {
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-lg text-tertiary leading-relaxed mb-6">
-                JuvoniQ was founded by <strong className="text-foreground">Alwande "Jay" Nhlapho</strong> and{" "}
+                JuveniQ was founded by <strong className="text-foreground">Alwande "Jay" Nhlapho</strong> and{" "}
                 <strong className="text-foreground">Sthembiso Ndlovu</strong>, two passionate 
                 technologists who met while studying computer science in eMalahleni.
               </p>
