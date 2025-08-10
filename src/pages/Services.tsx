@@ -143,7 +143,7 @@ useEffect(()=> window.scrollTo({behavior: 'smooth', top: 0}), [])
           <Tabs defaultValue="web" className="w-full">
             <TabsList className="flex gap-2 justify-center mb-8">
               <TabsTrigger value="web" className="flex items-center gap-2 text-base">
-                {/* Use Globe icon for Web Packs tab, since Web does not exist */}
+                
                 <Globe className="h-5 w-5" />
                 Web Packs
               </TabsTrigger>

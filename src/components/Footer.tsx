@@ -146,10 +146,10 @@ const Footer = () => {
                 <Mail size={16} color="white" className="mr-2 text-primary mt-1" />
                 <span className="text-tertiary">
                   <a
-                    href="mailto:juveniq105@gmail.com"
+                    href="mailto:contact@juveniq.co.za"
                     className="hover:text-primary transition-colors"
                   >
-                    juveniq105@gmail.com
+                    contact@juveniq.co.za
                   </a>
                 </span>
               </li>
