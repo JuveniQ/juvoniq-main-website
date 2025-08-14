@@ -159,5 +159,18 @@ export const projects = [
       impact: "Helped users build polished resumes, reducing job application time by 30%.",
       link: "https://jcv-maker.netlify.app/",
     },
-
+    {
+      title: "AJ Nhlapho Portfolio",
+      description: "A portfolio website for one of the founders of JuveniQ",
+      image: "https://ajnhlapho.juveniq.co.za",
+      technologies: ["React", "Styled Components", "TailWindcss"],
+      category: "Productivity",
+      features: [
+        "Background Animations",
+        "Personalized content",
+        "Skill Metrics",
+      ],
+      impact: "Helped build credibility and client outreach.",
+      link: "https://ajnhlapho.juveniq.co.za",
+    },
   ];
