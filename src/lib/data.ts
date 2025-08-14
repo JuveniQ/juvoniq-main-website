@@ -1,6 +1,7 @@
 import project1Image from '/JIQ_main_logo.png'
 import project2Image from '/projects/gig-kasi.png'
 import project3Image from '/projects/jcv.png'
+import project4Image from '/projects/profile.png'
 
 export const webPackages = [
   {
@@ -162,7 +163,7 @@ export const projects = [
     {
       title: "AJ Nhlapho Portfolio",
       description: "A portfolio website for one of the founders of JuveniQ",
-      image: "https://ajnhlapho.juveniq.co.za",
+      image: project4Image,
       technologies: ["React", "Styled Components", "TailWindcss"],
       category: "Productivity",
       features: [
