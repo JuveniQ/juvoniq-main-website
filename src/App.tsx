@@ -12,7 +12,6 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import React from "react";
 
 const queryClient = new QueryClient();
 const App = () => {
