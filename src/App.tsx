@@ -4,7 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ReactGA from 'react-ga'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -16,22 +15,7 @@ import NotFound from "./pages/NotFound";
 import React from "react";
 
 const queryClient = new QueryClient();
-// Initialize Google Analytics
-const trackingId = "G-4YR4K2DWVX"; // Replace with your Tracking ID
-ReactGA.initialize(trackingId);
-
-// Log page views
-const logPageView = () => {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
-};
-
-
 const App = () => {
-  React.useEffect(() => {
-    logPageView();
-  }, []);
-
 
   return (
     <QueryClientProvider client={queryClient}>
