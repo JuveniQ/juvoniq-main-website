@@ -33,7 +33,7 @@ const Header = () => {
               />
               <span className="text-4xl font-montserrat-bold text-primary">
                 Juveni
-                <span className="font-quando ">Q</span> <span>SIMPLE TECH, REAL IM</span>
+                <span className="font-quando ">Q</span> 
               </span>
             </Link>
           </div>
