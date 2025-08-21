@@ -6,16 +6,15 @@ import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Helper to display both ZAR and USD & strikethrough
-function PriceDisplay({ oldZar, oldUsd }: { oldZar: number, oldUsd: number }) {
+function PriceDisplay({ oldZar }: { oldZar: number }) {
   const newZar = Math.round(oldZar * 0.15);
-  const newUsd = Math.round(oldUsd * 0.15);
   return (
     <div>
       <span className="line-through text-sm text-muted-foreground mr-2">
-        R{oldZar.toLocaleString()} (~${oldUsd.toLocaleString()})
+        R{oldZar.toLocaleString()}
       </span>
       <span className="text-3xl font-bold text-primary">
-        R{newZar.toLocaleString()} (~${newUsd.toLocaleString()})
+        R{newZar.toLocaleString()}
       </span>
     </div>
   );
@@ -27,7 +26,6 @@ type Package = {
   description: string;
   delivery: string;
   oldZar: number;
-  oldUsd: number;
   features: string[];
 };
 
@@ -48,7 +46,7 @@ export function ServicePackages({ packages }: { packages: Package[] }) {
               <span className="font-medium">{pkg.type} Package</span>
             </p>
             <div className="mb-2">
-              <PriceDisplay oldZar={pkg.oldZar} oldUsd={pkg.oldUsd} />
+              <PriceDisplay oldZar={pkg.oldZar} />
             </div>
             <div className="text-sm text-muted-foreground mb-2 italic">
               {pkg.delivery} delivery

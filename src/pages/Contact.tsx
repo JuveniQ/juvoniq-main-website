@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: "juveniq105@gmail.com",
+      details: "contact@juveniq.co.za",
       action: "mailto:contact@juveniq.co.za",
     },
      {

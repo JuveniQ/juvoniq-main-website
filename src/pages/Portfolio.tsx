@@ -144,7 +144,7 @@ const Portfolio = () => {
             {[
               { number: "50+", label: "Projects Completed" },
               { number: "30+", label: "Happy Clients" },
-              { number: "5", label: "Countries Served" },
+              { number: "1", label: "Countries Served" },
               { number: "99%", label: "Client Satisfaction" }
             ].map((stat, index) => (
               <div key={stat.label} className="text-center">
