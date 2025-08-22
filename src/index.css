@@ -18,10 +18,10 @@
     --primary: 215 100% 12%;       /* Navy */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 200 80% 40%;      /* Baby Blue */
+    --secondary: 200 80% 60%;      /* Baby Blue */
     --secondary-foreground: 215 100% 20%;
 
-    --accent: 45 100% 50%;         /* Gold */
+    --accent: 45 100% 35%;         /* Gold */
     --accent-foreground: 220 20% 10%;
 
     --muted: 0 0% 35%;             /* Light Grey */
