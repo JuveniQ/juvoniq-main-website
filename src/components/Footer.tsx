@@ -63,7 +63,7 @@ const Footer = () => {
                 <div className="logo-space group-hover:scale-105 transition-transform duration-300">
                   <img src={icon_2} alt="JuveniQ Logo" className="h-12 bg-primary" />
                 </div>
-                <span className="text-4xl font-montserrat-bold text-primary">
+                <span className="text-4xl font-montserrat text-primary">
                   Juveni
                   <span className="font-quando text-primary">Q</span>
                 </span>
