@@ -19,7 +19,7 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b-2 border-primary border-border sticky top-0 z-50 shadow-sm transition-colors duration-300">
+    <header className="bg-background/95 backdrop-blur-sm border-b-2 border-primary sticky top-0 z-50 shadow-sm transition-colors duration-300">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
 

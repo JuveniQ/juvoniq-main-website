@@ -150,7 +150,7 @@ export const projects = [
       "Secure payments",
       "Job posting & bidding"
     ],
-    impact: "A work in development. Follow our social media for early access and updates.",
+    impact: "A work in progress. Follow our social media for early access and updates.",
     link: null,
   },
   {
