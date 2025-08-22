@@ -20,7 +20,7 @@ const Portfolio = () => {
         <div className="text-center mb-16 fade-in">
           <div className="mb-8 flex justify-center">
             <div className="logo-space-small w-24 h-24  bg-primary rounded-full shadow-xl group">
-              <img src={icon} alt="JuveniQ Logo" className="h-24 y  w-auto transition-transform duration-300 group-hover:scale-105" />
+              <img src={icon} alt="JuveniQ Logo" className="h-24 w-auto transition-transform duration-300 group-hover:scale-105" />
             </div>
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
