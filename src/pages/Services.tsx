@@ -100,13 +100,13 @@ const Services = () => {
         </div>
 
         {/* === Core Services Grid === */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
+        <div className="grid grid-cols-1 border-secondary lg:grid-cols-2 gap-8 mb-24">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card
                 key={service.title}
-                className="card-3d lift group border-primary/20 hover:border-primary/40 transition-all duration-300"
+                className="card-3d lift border-3 border-secondary group  hover:border-primary/40 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
@@ -146,18 +146,16 @@ const Services = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
               Ready-made solutions for African businesses — simple, affordable, and scalable.
             </p>
-            <div className="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium border border-accent/30">
-              {promoNote}
-            </div>
+           
           </div>
 
-          <Tabs defaultValue="web" className="w-full">
+          <Tabs defaultValue="web" className=" bg-secondary w-full">
             <TabsList className="flex gap-2 justify-center mb-8 flex-wrap">
-              <TabsTrigger value="web" className="flex items-center gap-2 text-base px-6 py-3">
+              <TabsTrigger value="web" className="flex text-accent items-center gap-2 text-base px-6 py-3">
                 <Globe className="h-5 w-5" />
                 Web Packs
               </TabsTrigger>
-              <TabsTrigger value="apps" className="flex items-center gap-2 text-base px-6 py-3">
+              <TabsTrigger value="apps" className="flex text-accent items-center gap-2 text-base px-6 py-3">
                 Mobile Apps
                 <FaApple className="h-5 w-5 opacity-70 -ml-1" />
                 <FaAndroid className="h-5 w-5 opacity-70 -ml-1" />
@@ -172,9 +170,7 @@ const Services = () => {
             </TabsContent>
           </Tabs>
 
-          <div className="text-center mt-4">
-            <span className="text-sm text-muted-foreground">{promoNote}</span>
-          </div>
+          
         </div>
 
         {/* === CTA Section === */}

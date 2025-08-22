@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import icon_1 from "/JIQ_white_logo_no_bg.png";
+import icon_1 from "/JIQ_main_logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-sm transition-colors duration-300">
+    <header className="bg-background/95 backdrop-blur-sm border-b-2 border-primary border-border sticky top-0 z-50 shadow-sm transition-colors duration-300">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
 
@@ -31,9 +31,9 @@ const Header = () => {
                 alt="JuveniQ Logo"
                 className="h-12 bg-primary transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-4xl font-montserrat-bold text-primary">
+              <span className="text-4xl font-montserrat text-primary">
                 Juveni
-                <span className="font-quando ">Q</span> 
+                <span className="font-quando">Q</span> 
               </span>
             </Link>
           </div>
